@@ -17,7 +17,7 @@
 	form input[type="password"],
 	form select,
 	form textarea {
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+		-ms-behavior: url("/theme/js/ie/PIE.htc");
 	}
 
 /* Button */
@@ -27,7 +27,7 @@
 	input[type="reset"],
 	button,
 	.button {
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+		-ms-behavior: url("/theme/js/ie/PIE.htc");
 	}
 
 /* Header */
@@ -48,5 +48,5 @@
 
 	#main > section.cover {
 		background-position: auto;
-		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
+		-ms-behavior: url("/theme/js/ie/backgroundsize.min.htc");
 	}
