@@ -36,7 +36,7 @@ def process_pdf():
             continue
         basename, _, extension = fname.rpartition('.')
         infile = 'wisel_private/' + basename + '.' + extension
-        outfile = 'wisel/' + basename + '-public.pdf'
+        outfile = 'content/dewisel/' + basename + '-public.pdf'
         thumbnail = 'wisel_thumbnails/' + basename + '.jpg'
         if not exists(outfile):
             fab.local(cmd.format(fname=quote(infile), pname=quote(outfile)))
