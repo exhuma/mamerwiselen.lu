@@ -1,0 +1,112 @@
+{% macro full_article(article) %}
+  <section id="portfolio" class="two">
+    <div class="container">
+      <footer class="post-info">
+        <time class="published" datetime="{{ article.date.isoformat() }}">
+          <strong>Published:</strong> {{ article.locale_date }}
+        </time>
+        {% if article.modified %}
+        <time class="modified" datetime="{{ article.modified.isoformat() }}">
+          <strong>Modified:</strong> {{ article.locale_modified }}
+        </time>
+        {% endif %}
+        {% if article.authors %}
+        <address class="vcard author">
+          By {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+          {% endfor %}
+        </address>
+        {% endif %}
+        <br clear="both" />
+      </footer>
+      <header>
+        <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+      </header>
+      <div class="entry">
+        {{ article.content }}
+      </div>
+    </div>
+  </section>
+{% endmacro %}
+
+
+<!DOCTYPE HTML>
+<!--
+  Prologue by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>{# {{{ #}
+    <title>Mamer Wiselen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="{{SITE_URL}}/{{THEME_STATIC_DIR}}/css/main.css" />
+    <link rel="stylesheet" href="{{SITE_URL}}/{{THEME_STATIC_DIR}}/css/local.css" />
+    <link rel="alternate" type="application/atom+xml" title="All Articles" href="/atom.xml" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{SITE_URL}}/{{THEME_STATIC_DIR}}/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{SITE_URL}}/{{THEME_STATIC_DIR}}/css/ie9.css" /><![endif]-->
+    {% block head %}{% endblock %}
+  </head>{# }}} #}
+  <body>
+
+    <div id="header">{# {{{ #}
+
+        <div class="top">
+          <div id="logo">{# {{{ #}
+              <a href="/">
+                <span class="image avatar48"><img src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/mw.png" alt="Mamer Wiselen Logo" /></span>
+              <h1 id="title">{% block title %}Mamer Wiselen{% endblock %}</h1></a>
+          </div>{# }}} #}
+            <nav id="nav">{# {{{ #}
+              <ul>
+                <li><a href="/#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Haptsäit</span></a></li>
+                <li><a href="/pages/kontakt.html" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Kontakt</span></a></li>
+                <li><a href="/pages/de-wisel.html" class="skel-layers-ignoreHref"><span class="icon fa-file-pdf-o">Wisel</span></a></li>
+                <li><a href="/atom.xml" class="skel-layers-ignoreHref"><span class="icon fa-rss">Feed</span></a></li>
+              </ul>
+            </nav>{# }}} #}
+        </div>
+    </div>{# }}} #}
+
+      <div id="main">{# {{{ #}
+        {#  Intro  {{{  #}
+          <section id="top" class="one dark cover">
+            <div class="container">
+
+              <img id="FnelLogo" src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/fnel.png" alt="FNEL Logo" />
+              <header>
+                <h2>Mamer Wiselen</h2>
+                {% block subtitle %}{% endblock %}
+              </header>
+
+            </div>
+          </section>
+          {#  }}}  #}
+        {% block content %}{% endblock %}
+      </div>{# }}} #}
+
+      <div id="footer">{# {{{ #}
+
+        <!-- Copyright -->
+          <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+
+      </div>{# }}} #}
+
+    <!-- Scripts -->
+    <script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/jquery.min.js"></script>
+    <script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/jquery.scrolly.min.js"></script>
+    <script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/jquery.scrollzer.min.js"></script>
+    <script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/skel.min.js"></script>
+    <script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/util.js"></script>
+    <!--[if lte IE 8]><script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/ie/respond.min.js"></script><![endif]-->
+    <script src="{{SITE_URL}}/{{THEME_STATIC_DIR}}/js/main.js"></script>
+
+  </body>
+</html>
+
+
+<!-- vim: set foldmethod=marker: -->

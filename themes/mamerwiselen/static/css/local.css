@@ -1,0 +1,27 @@
+#FnelLogo {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.subpage {
+    padding: 0.5em 0 !important;
+}
+
+.post-info {
+    margin-top: 0;
+    margin-bottom: 3em;
+    font-size: small;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border: 1px solid #C7CDD1;
+}
+
+.post-info TIME {
+    float: left;
+    clear: left;
+}
+
+.post-info ADDRESS {
+    float: right;
+}
