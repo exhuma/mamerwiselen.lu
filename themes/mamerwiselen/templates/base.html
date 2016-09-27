@@ -47,6 +47,9 @@
     <link rel="alternate" type="application/atom+xml" title="All Articles" href="/atom.xml" />
     <!--[if lte IE 8]><link rel="stylesheet" href="{{SITE_URL}}/{{THEME_STATIC_DIR}}/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="{{SITE_URL}}/{{THEME_STATIC_DIR}}/css/ie9.css" /><![endif]-->
+    {% if GAPPS_KEY %}
+    <meta name="google-site-verification" content="{{ GAPPS_KEY }}" />
+    {% endif %}
     {% block head %}{% endblock %}
   </head>{# }}} #}
   <body>
