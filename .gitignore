@@ -1,3 +1,4 @@
 *.pyc
 /output
+/pelicanconf.py
 wisel_private/*.pdf

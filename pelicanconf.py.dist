@@ -13,6 +13,9 @@ TIMEZONE = 'Europe/Luxembourg'
 
 DEFAULT_LANG = 'lb'
 
+# Add your google-site-verification key here.
+GAPPS_KEY = ''
+
 # Feed generation is usually not desired when developing
 FEED_ATOM = 'atom.xml'
 FEED_ALL_ATOM = None
